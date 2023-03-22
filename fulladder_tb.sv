@@ -1,7 +1,8 @@
-// Code your testbench here
-// or browse Examples
+
 module fulladder_tb;
+  
   timeunit 10ns; timeprecision 1ns;
+  
   logic a=0, cin=0, b, result, cout;
   fulladder dut (.*);
   
@@ -13,7 +14,7 @@ module fulladder_tb;
     #20 a <= 1; b <= 1; cin <= 0;
     
     #1  assert ({cout,result} == a+b+cin)
-    Concat $display ("Okay");
+        $display ("OK");
     	else $error ("Not okay");
     
     
@@ -26,3 +27,4 @@ module fulladder_tb;
     
   end
 endmodule
+
